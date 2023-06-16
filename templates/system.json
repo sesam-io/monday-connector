@@ -1,0 +1,24 @@
+{
+  "_id": "{{@ system @}}",
+  "oauth2": {
+    "access_token": "$SECRET(oauth_access_token)",
+    "client_id": "$SECRET(oauth_client_id)",
+    "client_secret": "$SECRET(oauth_client_secret)",
+    "token_url": "{{@ token_url @}}"
+  },
+    "operations": {
+    "boards-list": {
+      "id_expression": "{{ node.id }}",
+      "method": "POST",
+      "payload": {
+        "query": "query { boards () { name state id permissions } }",
+        "variables": {}
+      },
+      "payload_property": "data.boards",
+      "url": ""
+    }
+  },
+  "type": "system:rest",
+  "url_pattern": "https://api.monday.com/v2/%s",
+  "verify_ssl": true
+}

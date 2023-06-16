@@ -1,0 +1,34 @@
+{
+  "additional_parameters": {
+    "account_id": {},
+    "token_url": {}
+  },
+  "auth": "oauth2",
+  "datatypes": {
+    "boards": {
+      "template": "templates/boards.json"
+    }
+  },
+  "oauth2": {
+    "login_url": "https://auth.monday.com/oauth2/authorize",
+    "scopes": [
+      "me:read",
+      "boards:read",
+      "boards:write",
+      "workspaces:read",
+      "workspaces:write",
+      "users:read",
+      "users:write",
+      "account:read",
+      "notifications:write",
+      "updates:read",
+      "updates:write",
+      "assets:read",
+      "tags:read",
+      "teams:read",
+      "webhooks:write"
+    ],
+    "token_url": "https://auth.monday.com/oauth2/token"
+  },
+  "system-template": "templates/system.json"
+}
